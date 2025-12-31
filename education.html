@@ -12,73 +12,71 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              main: '#0ef',
+              bg: '#1f242d',
+              second: '#323946'
+            }
+          }
+        }
+      }
+    </script>
   </head>
-  <body>
-    <nav class="navbar">
-      <div class="logo">Port<span>folio.</span></div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="education.html" class="active">Education</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <body class="bg-bg text-white antialiased">
+    <nav class="fixed top-0 left-0 w-full py-8 px-[9%] bg-bg flex justify-between items-center z-50 shadow-lg">
+      <div class="text-3xl font-semibold">Port<span class="text-main">folio.</span></div>
+      <ul class="flex items-center space-x-8">
+        <li><a href="index.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Home</a></li>
+        <li><a href="about.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">About</a></li>
+        <li><a href="education.html" class="text-lg font-medium text-main border-b-2 border-main pb-1">Education</a></li>
+        <li><a href="experience.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Experience</a></li>
+        <li><a href="projects.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Projects</a></li>
+        <li><a href="contact.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Contact</a></li>
       </ul>
     </nav>
 
-    <section class="education-page">
-      <h2 class="heading">My <span>Education</span></h2>
+    <section class="education-page min-h-screen pt-40 px-[9%] flex flex-col items-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">My <span class="text-main">Education</span></h2>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="date">
-              <i class="fas fa-calendar-alt"></i> 2025 - Present
-            </div>
-            <h3>University Student</h3>
-            <h4>Hassan II University - Casablanca</h4>
-            <p>
-              First-year student majoring in Management (Taha Hussein / Ain
-              Chock Faculty). Focusing on economics, accounting, and business
-              administration.
-            </p>
+      <div class="w-full max-w-3xl space-y-8">
+        <div class="flex items-start gap-4">
+          <div class="w-4 h-4 rounded-full bg-main mt-2"></div>
+          <div class="flex-1 bg-second p-5 rounded-lg border border-main hover:scale-105 transform transition">
+            <div class="text-sm text-gray-300"><i class="fas fa-calendar-alt"></i> 2025 - Present</div>
+            <h3 class="text-xl text-main font-semibold mt-2">University Student</h3>
+            <h4 class="italic text-gray-200">Hassan II University - Casablanca</h4>
+            <p class="mt-2 text-gray-200">First-year student majoring in Management (Taha Hussein / Ain Chock Faculty). Focusing on economics, accounting, and business administration.</p>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="date">
-              <i class="fas fa-laptop-code"></i> 2025 - Present
-            </div>
-            <h3>Web Development</h3>
-            <h4>Wings Tech Center - Nouaceur</h4>
-            <p>
-              Specialized training in Full Stack Web Development. Learning HTML,
-              CSS, JavaScript, and modern web technologies.
-            </p>
+        <div class="flex items-start gap-4">
+          <div class="w-4 h-4 rounded-full bg-main mt-2"></div>
+          <div class="flex-1 bg-second p-5 rounded-lg border border-main hover:scale-105 transform transition">
+            <div class="text-sm text-gray-300"><i class="fas fa-laptop-code"></i> 2025 - Present</div>
+            <h3 class="text-xl text-main font-semibold mt-2">Web Development</h3>
+            <h4 class="italic text-gray-200">Wings Tech Center - Nouaceur</h4>
+            <p class="mt-2 text-gray-200">Specialized training in Full Stack Web Development. Learning HTML, CSS, JavaScript, and modern web technologies.</p>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="date">
-              <i class="fas fa-graduation-cap"></i> 2024 - 2025
-            </div>
-            <h3>Baccalaureate Degree</h3>
-            <h4>Taha Hussein High School</h4>
-            <p>
-              Obtained Baccalaureate in Physical Sciences (French Option).
-              Graduated with honors.
-            </p>
+        <div class="flex items-start gap-4">
+          <div class="w-4 h-4 rounded-full bg-main mt-2"></div>
+          <div class="flex-1 bg-second p-5 rounded-lg border border-main hover:scale-105 transform transition">
+            <div class="text-sm text-gray-300"><i class="fas fa-graduation-cap"></i> 2024 - 2025</div>
+            <h3 class="text-xl text-main font-semibold mt-2">Baccalaureate Degree</h3>
+            <h4 class="italic text-gray-200">Taha Hussein High School</h4>
+            <p class="mt-2 text-gray-200">Obtained Baccalaureate in Physical Sciences (French Option). Graduated with honors.</p>
           </div>
         </div>
       </div>
     </section>
-<footer>
-      <p>&copy; 2025 Bilal Nainia.</p>
+  <footer class="py-6 text-center text-sm text-gray-400">
+      <p>&copy; 2024 Bilal Nainia.</p>
+    </footer>
   </body>
-</html>
+  </html>

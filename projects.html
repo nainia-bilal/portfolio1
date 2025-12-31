@@ -12,56 +12,61 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              main: '#0ef',
+              bg: '#1f242d',
+              second: '#323946'
+            }
+          }
+        }
+      }
+    </script>
   </head>
-  <body>
-    <nav class="navbar">
-      <div class="logo">Port<span>folio.</span></div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <body class="bg-bg text-white antialiased">
+    <nav class="fixed top-0 left-0 w-full py-8 px-[9%] bg-bg flex justify-between items-center z-50 shadow-lg">
+      <div class="text-3xl font-semibold">Port<span class="text-main">folio.</span></div>
+      <ul class="flex items-center space-x-8">
+        <li><a href="index.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Home</a></li>
+        <li><a href="about.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">About</a></li>
+        <li><a href="education.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Education</a></li>
+        <li><a href="experience.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Experience</a></li>
+        <li><a href="projects.html" class="text-lg font-medium text-main border-b-2 border-main pb-1">Projects</a></li>
+        <li><a href="contact.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Contact</a></li>
       </ul>
     </nav>
 
-    <section class="projects-page">
-      <h2 class="heading">Latest <span>Projects</span></h2>
-
-      <div class="portfolio-container">
-        <div class="portfolio-box">
-          <img src="./src/imgportfolio.webp" alt="Project 1" />
-          <div class="portfolio-layer">
-            <h4>Sales Management Dashboard</h4>
-            <p>
-              A front-end dashboard interface designed for tracking sales data
-              and inventory. Bridges the gap between business strategies and
-              technical solutions.
-            </p>
-            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+    <section class="projects-page min-h-screen pt-40 px-[9%] flex flex-col items-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">Latest <span class="text-main">Projects</span></h2>
+      <div class="portfolio-container grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
+        <div class="portfolio-box group relative overflow-hidden rounded-2xl h-72">
+          <img src="./src/imgportfolio.webp" alt="Project 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black/20 to-main/80 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+            <h4 class="text-2xl font-bold text-bg">Sales Management Dashboard</h4>
+            <p class="text-bg mt-2">A front-end dashboard interface designed for tracking sales data and inventory. Bridges the gap between business strategies and technical solutions.</p>
+            <a href="#" class="mt-4 inline-flex items-center justify-center w-12 h-12 bg-white rounded-full text-gray-800"><i class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
 
-        <div class="portfolio-box">
-          <img src="./src/landing page3 - Copie.webp" alt="Project 2" />
-          <div class="portfolio-layer">
-            <h4>E-Commerce Landing Page</h4>
-            <p>
-              A modern landing page for a product launch, focusing on UI/UX
-              design and high conversion rates using HTML & CSS animations.
-            </p>
-            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        <div class="portfolio-box group relative overflow-hidden rounded-2xl h-72">
+          <img src="./src/landing page3 - Copie.webp" alt="Project 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black/20 to-main/80 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+            <h4 class="text-2xl font-bold text-bg">E-Commerce Landing Page</h4>
+            <p class="text-bg mt-2">A modern landing page for a product launch, focusing on UI/UX design and high conversion rates using HTML & CSS animations.</p>
+            <a href="#" class="mt-4 inline-flex items-center justify-center w-12 h-12 bg-white rounded-full text-gray-800"><i class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
 
-        <div class="portfolio-box">
-          <img src="./src/img5.avif" alt="Project 3" />
-          <div class="portfolio-layer">
-            <h4>E-Commerce Store</h4>
-            <p>A concept design for an online store with product listings.</p>
-            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        <div class="portfolio-box group relative overflow-hidden rounded-2xl h-72">
+          <img src="./src/img5.avif" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black/20 to-main/80 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+            <h4 class="text-2xl font-bold text-bg">E-Commerce Store</h4>
+            <p class="text-bg mt-2">A concept design for an online store with product listings.</p>
+            <a href="#" class="mt-4 inline-flex items-center justify-center w-12 h-12 bg-white rounded-full text-gray-800"><i class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
       </div>

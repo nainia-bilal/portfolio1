@@ -12,42 +12,55 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              main: '#0ef',
+              bg: '#1f242d',
+              second: '#323946'
+            }
+          }
+        }
+      }
+    </script>
   </head>
-  <body>
-    <nav class="navbar">
-      <div class="logo">Port<span>folio.</span></div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <body class="bg-bg text-white antialiased">
+    <nav class="fixed top-0 left-0 w-full py-8 px-[9%] bg-bg flex justify-between items-center z-50 shadow-lg">
+      <div class="text-3xl font-semibold">Port<span class="text-main">folio.</span></div>
+      <ul class="flex items-center space-x-8">
+        <li><a href="index.html" class="text-lg font-medium text-main border-b-2 border-main pb-1">Home</a></li>
+        <li><a href="about.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">About</a></li>
+        <li><a href="education.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Education</a></li>
+        <li><a href="experience.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Experience</a></li>
+        <li><a href="projects.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Projects</a></li>
+        <li><a href="contact.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Contact</a></li>
       </ul>
     </nav>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h3>Hello, It's Me</h3>
-        <h1>Bilal Nainia</h1>
-        <h3>And I'm a <span class="typing-text"></span></h3>
-        <p>
+    <section class="hero min-h-screen pt-40 px-[9%] flex lg:flex-row flex-col items-center justify-between gap-8">
+      <div class="hero-content max-w-xl text-left">
+        <h3 class="text-2xl md:text-3xl font-semibold">Hello, It's Me</h3>
+        <h1 class="text-4xl md:text-6xl font-extrabold mt-2">Bilal Nainia</h1>
+        <h3 class="text-xl md:text-2xl mt-2">And I'm a <span class="typing-text font-semibold text-main"></span></h3>
+        <p class="text-base md:text-lg mt-4 text-gray-200">
           Welcome to my professional portfolio. I combine my management studies
           with my passion for web development to build unique digital
           experiences.
         </p>
 
-        <div class="social-icons">
-          <a href="https://github.com/nainia-bilal" target="_blank"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a href="https://www.instagram.com/YOUR_USERNAME" target="_blank"
-            ><i class="fab fa-instagram"></i
-          ></a>
+        <div class="flex items-center mt-6 space-x-4">
+          <a href="https://github.com/nainia-bilal" target="_blank" class="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-main text-main hover:bg-main hover:text-bg transition">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.instagram.com/YOUR_USERNAME" target="_blank" class="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-main text-main hover:bg-main hover:text-bg transition">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
 
-        <a href="contact.html" class="btn">Hire Me</a>
+        <a href="contact.html" class="inline-block mt-8 px-6 py-3 bg-main text-bg rounded-full font-semibold shadow hover:opacity-90">Hire Me</a>
       </div>
 
       <div class="hero-img">
@@ -58,11 +71,13 @@
           data-tilt-glare
           data-tilt-max-glare="0.5"
           data-tilt-scale="1.1"
+          class="w-72 md:w-96 rounded-full shadow-2xl ring-4 ring-main/30"
         />
       </div>
     </section>
-<footer>
+<footer class="py-6 text-center text-sm text-gray-400">
       <p>&copy; 2025 Bilal Nainia.</p>
+  </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
     <script src="script.js"></script>
   </body>

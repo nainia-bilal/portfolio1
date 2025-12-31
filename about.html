@@ -12,61 +12,73 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              main: '#0ef',
+              bg: '#1f242d',
+              second: '#323946'
+            }
+          }
+        }
+      }
+    </script>
   </head>
-  <body>
-    <nav class="navbar">
-      <div class="logo">Port<span>folio.</span></div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <body class="bg-bg text-white antialiased">
+    <nav class="fixed top-0 left-0 w-full py-8 px-[9%] bg-bg flex justify-between items-center z-50 shadow-lg">
+      <div class="text-3xl font-semibold">Port<span class="text-main">folio.</span></div>
+      <ul class="flex items-center space-x-8">
+        <li><a href="index.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Home</a></li>
+        <li><a href="about.html" class="text-lg font-medium text-main border-b-2 border-main pb-1">About</a></li>
+        <li><a href="education.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Education</a></li>
+        <li><a href="experience.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Experience</a></li>
+        <li><a href="projects.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Projects</a></li>
+        <li><a href="contact.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Contact</a></li>
       </ul>
     </nav>
 
-    <section class="about-page">
-      <h2 class="heading">About <span>Me</span></h2>
-      <div class="about-container">
+    <section class="about-page min-h-screen pt-40 px-[9%] flex flex-col items-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">About <span class="text-main">Me</span></h2>
+      <div class="about-container flex flex-wrap justify-center items-center gap-16">
         <div class="about-img">
           <img
             src="./src/img2.png"
             alt="About Me"
             data-tilt
             data-tilt-scale="1.1"
+            class="w-64 md:w-80 rounded-lg border-2 border-main shadow-lg"
           />
         </div>
-        <div class="about-text">
-          <h3>
-            Web Developer &
-            <span style="color: var(--main-color)">Management Student</span>
-          </h3>
-          <p>
+        <div class="about-text max-w-xl">
+          <h3 class="text-2xl md:text-3xl font-semibold">Web Developer & <span class="text-main">Management Student</span></h3>
+          <p class="mt-4 text-gray-200">
             My name is Bilal Nainia. I am a dedicated individual balancing
             academic studies in Management with intensive training in Web
             Development.
           </p>
-          <p>
+          <p class="mt-4 text-gray-200">
             I specialize in building front-end applications and I am constantly
             learning new technologies. I also have an interest in creative
             writing and digital marketing.
           </p>
 
-          <div class="skills-section">
-            <h3>My Skills</h3>
-            <div class="skills-grid">
-              <span class="skill-tag">HTML</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">CSS</span>
+          <div class="skills-section mt-6">
+            <h3 class="text-xl font-semibold mb-3">My Skills</h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 bg-second rounded border border-main text-white text-sm hover:bg-main hover:text-bg transition">HTML</span>
+              <span class="px-4 py-2 bg-second rounded border border-main text-white text-sm hover:bg-main hover:text-bg transition">JavaScript</span>
+              <span class="px-4 py-2 bg-second rounded border border-main text-white text-sm hover:bg-main hover:text-bg transition">CSS</span>
             </div>
           </div>
         </div>
       </div>
     </section>
-<footer>
+<footer class="py-6 text-center text-sm text-gray-400">
       <p>&copy; 2025 Bilal Nainia.</p>
+  </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
     <script src="script.js"></script>
   </body>

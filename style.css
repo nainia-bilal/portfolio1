@@ -215,7 +215,7 @@ section {
   z-index: -1;
 }
 .timeline-item {
-  padding: 10px 40px;
+  padding: 40px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
