@@ -1,4 +1,4 @@
-/* 1. Basics */
+/* 1. Basics & Colors */
 :root {
   --bg-color: #1f242d;
   --second-bg-color: #323946;
@@ -50,7 +50,7 @@ body {
 .nav-links a {
   font-size: 1.7rem;
   color: var(--text-color);
-  margin-left: 4rem;
+  margin-left: 3rem;
   transition: 0.3s;
   font-weight: 500;
 }
@@ -141,7 +141,7 @@ section {
   border: 2px solid var(--main-color);
 }
 
-/* 5. Hero Image (Right side) */
+/* 5. Hero Image */
 .hero-img img {
   width: 35vw;
   max-width: 450px;
@@ -150,7 +150,7 @@ section {
   cursor: pointer;
 }
 
-/* 6. About Page (Left Img, Right Text) */
+/* 6. About Page */
 .about-container {
   display: flex;
   justify-content: center;
@@ -197,7 +197,7 @@ section {
   color: var(--second-bg-color);
 }
 
-/* 7. Education Timeline */
+/* 7. Education & Experience Timeline */
 .timeline {
   position: relative;
   max-width: 800px;
