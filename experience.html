@@ -1,82 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Experience | Bilal Nainia</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              main: '#0ef',
-              bg: '#1f242d',
-              second: '#323946'
-            }
-          }
-        }
-      }
+      tailwind.config = { theme: { extend: { colors: { main: '#06b6d4', bg: '#0f1724', second: '#111827' } } } }
     </script>
+    <style>
+      @keyframes fadeInUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+      .fade-in-up{animation:fadeInUp .6s cubic-bezier(.16,.84,.3,1) var(--delay,0s) both}
+    </style>
   </head>
-  <body class="bg-bg text-white antialiased">
-    <nav class="fixed top-0 left-0 w-full py-8 px-[9%] bg-bg flex justify-between items-center z-50 shadow-lg">
-      <div class="text-3xl font-semibold">Port<span class="text-main">folio.</span></div>
-      <ul class="flex items-center space-x-8">
-        <li><a href="index.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Home</a></li>
-        <li><a href="about.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">About</a></li>
-        <li><a href="education.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Education</a></li>
-        <li><a href="experience.html" class="text-lg font-medium text-main border-b-2 border-main pb-1">Experience</a></li>
-        <li><a href="projects.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Projects</a></li>
-        <li><a href="contact.html" class="text-lg font-medium text-white hover:text-main hover:border-b-2 hover:border-main pb-1">Contact</a></li>
-      </ul>
-    </nav>
+  <body class="bg-bg text-white font-poppins antialiased">
+    <header class="fixed inset-x-0 top-0 z-50 bg-bg/90 backdrop-blur-md">
+      <nav class="max-w-6xl mx-auto px-6 md:px-8 py-4 flex items-center justify-between">
+        <a href="index.html" class="text-2xl font-semibold">Port<span class="text-main">folio.</span></a>
+        <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false" class="md:hidden p-2 rounded-md border border-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <ul id="mobile-menu" class="hidden md:flex md:items-center md:space-x-8 mt-3 md:mt-0">
+          <li><a href="index.html" class="text-md md:text-lg font-medium hover:text-main">Home</a></li>
+          <li><a href="about.html" class="text-md md:text-lg font-medium hover:text-main">About</a></li>
+          <li><a href="education.html" class="text-md md:text-lg font-medium hover:text-main">Education</a></li>
+          <li><a href="experience.html" class="text-md md:text-lg font-medium text-main">Experience</a></li>
+          <li><a href="projects.html" class="text-md md:text-lg font-medium hover:text-main">Projects</a></li>
+          <li><a href="contact.html" class="text-md md:text-lg font-medium hover:text-main">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <section class="education-page min-h-screen pt-40 px-[9%] flex flex-col items-center">
-      <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">Work <span class="text-main">Experience</span></h2>
-
-      <div class="w-full max-w-3xl space-y-8">
-        <div class="flex items-start gap-4">
-          <div class="w-4 h-4 rounded-full bg-main mt-2"></div>
-          <div class="flex-1 bg-second p-5 rounded-lg border border-main hover:scale-105 transform transition">
-            <div class="text-sm text-gray-300"><i class="fas fa-laptop-code"></i> 2025 - Present</div>
-            <h3 class="text-xl text-main font-semibold mt-2">Freelance Web Developer</h3>
-            <h4 class="italic text-gray-200">Remote / Freelance</h4>
-            <p class="mt-2 text-gray-200">Designing and building modern websites for clients. Transforming business requirements into functional digital solutions using HTML, CSS, and JS.</p>
-          </div>
+    <main class="pt-28 max-w-4xl mx-auto px-6 md:px-8 py-12">
+      <h1 class="text-3xl font-bold mb-6 fade-in-up" style="--delay:0.04s">Work <span class="text-main">Experience</span></h1>
+      <div class="space-y-6">
+        <div class="bg-second p-5 rounded-xl border border-main fade-in-up" style="--delay:0.08s">
+          <div class="text-sm text-gray-300"><i class="fas fa-laptop-code"></i> 2025 - Present</div>
+          <h3 class="text-xl text-main font-semibold mt-2">Freelance Web Developer</h3>
+          <h4 class="italic text-gray-200">Remote / Freelance</h4>
+          <p class="mt-2 text-gray-300">Designing and building modern websites for clients using HTML, CSS and JavaScript.</p>
         </div>
-
-        <div class="flex items-start gap-4">
-          <div class="w-4 h-4 rounded-full bg-main mt-2"></div>
-          <div class="flex-1 bg-second p-5 rounded-lg border border-main hover:scale-105 transform transition">
-            <div class="text-sm text-gray-300"><i class="fas fa-briefcase"></i> 2022 - 2025</div>
-            <h3 class="text-xl text-main font-semibold mt-2">Independent Sales Representative</h3>
-            <h4 class="italic text-gray-200">Self-Employed (Commercial Indépendant)</h4>
-            <p class="mt-2 text-gray-200">Managed sales operations and client negotiations. Successfully achieved sales targets and expanded the client base through effective communication strategies.</p>
-          </div>
+        <div class="bg-second p-5 rounded-xl border border-main fade-in-up" style="--delay:0.12s">
+          <div class="text-sm text-gray-300"><i class="fas fa-briefcase"></i> 2022 - 2025</div>
+          <h3 class="text-xl text-main font-semibold mt-2">Independent Sales Representative</h3>
+          <h4 class="italic text-gray-200">Self-Employed</h4>
+          <p class="mt-2 text-gray-300">Managed sales operations and client relationships, achieving consistent targets.</p>
         </div>
-
-        <div class="flex items-start gap-4">
-          <div class="w-4 h-4 rounded-full bg-main mt-2"></div>
-          <div class="flex-1 bg-second p-5 rounded-lg border border-main hover:scale-105 transform transition">
-            <div class="text-sm text-gray-300"><i class="fas fa-store"></i> 2021 - 2023</div>
-            <h3 class="text-xl text-main font-semibold mt-2">Sales Assistant</h3>
-            <h4 class="italic text-gray-200">Retail Sector (Vendeur)</h4>
-            <p class="mt-2 text-gray-200">Provided direct customer service, managed inventory, and ensured shop organization. Developed strong communication and problem-solving skills.</p>
-          </div>
+        <div class="bg-second p-5 rounded-xl border border-main fade-in-up" style="--delay:0.16s">
+          <div class="text-sm text-gray-300"><i class="fas fa-store"></i> 2021 - 2023</div>
+          <h3 class="text-xl text-main font-semibold mt-2">Sales Assistant</h3>
+          <h4 class="italic text-gray-200">Retail Sector</h4>
+          <p class="mt-2 text-gray-300">Customer service, inventory management and shop organization.</p>
         </div>
       </div>
-    </section>
-  <footer class="py-6 text-center text-sm text-gray-400">
+    </main>
+
+    <footer class="py-8 text-center text-sm text-gray-400">
       <p>&copy; 2025 Bilal Nainia.</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
-  </html>
+</html>
